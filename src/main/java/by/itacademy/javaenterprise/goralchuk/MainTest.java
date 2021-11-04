@@ -22,12 +22,12 @@ public class MainTest {
 
         PatientDAO patientsDAO = context.getBean("patientBean", PatientDAOImpl.class);
         logger.info("Test response to the request: " + patientsDAO.findAllPersons());
-        /*patientsDAO.save(new Patient("Cindy", "Crawford", PatientSex.M, java.sql.Date.valueOf("1966-02-20")));*/
+        patientsDAO.save(new Patient("Cindy", "Crawford", PatientSex.M, java.sql.Date.valueOf("1966-02-20")));
         logger.info("Test response to the request: " + patientsDAO.findBySexPatients(PatientSex.F));
         logger.info("Test response to the request: " + patientsDAO.findBySexPatients(PatientSex.M));
 
         DoctorDAO doctorDAO = context.getBean("doctorBean", DoctorDAOImpl.class);
-       /* doctorDAO.save(new Doctor("Yuri", "Zhivago","philosopher"));*/
+        doctorDAO.save(new Doctor("Yuri", "Zhivago","philosopher"));
         logger.info("Test response to the request: " + doctorDAO.findAllPersons());
 
         context.close();
