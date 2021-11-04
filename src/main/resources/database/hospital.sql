@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `doctors` (
   `doc_surname` char(50) NOT NULL,
   `doc_specialization` char(50) NOT NULL,
   PRIMARY KEY (`doc_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 /*!40000 ALTER TABLE `doctors` DISABLE KEYS */;
 INSERT INTO `doctors` (`doc_ID`, `doc_name`, `doc_surname`, `doc_specialization`) VALUES
@@ -41,7 +41,9 @@ INSERT INTO `doctors` (`doc_ID`, `doc_name`, `doc_surname`, `doc_specialization`
 	(3, 'John', 'Elton', 'psihologist'),
 	(4, 'Bradley', 'Pitt', 'surgeon'),
 	(5, 'Dwayne', 'Johnson', 'surgeon'),
-	(6, 'Abraham', 'Lincoln', 'urologist');
+	(6, 'Abraham', 'Lincoln', 'urologist'),
+	(7, 'Yuri', 'Zhivago', 'philosopher'),
+	(8, 'Yuri', 'Zhivago', 'philosopher');
 /*!40000 ALTER TABLE `doctors` ENABLE KEYS */;
 
 CREATE TABLE IF NOT EXISTS `patients` (
@@ -52,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `patients` (
   `patient_sex` char(1) NOT NULL,
   `patient_birthday` date NOT NULL,
   PRIMARY KEY (`patient_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4;
 
 /*!40000 ALTER TABLE `patients` DISABLE KEYS */;
 INSERT INTO `patients` (`patient_ID`, `patient_registration`, `patient_name`, `patient_surname`, `patient_sex`, `patient_birthday`) VALUES
@@ -64,7 +66,11 @@ INSERT INTO `patients` (`patient_ID`, `patient_registration`, `patient_name`, `p
 	(18, '2021-10-24 22:41:05', 'Alice', 'Cooper', 'M', '1950-09-04'),
 	(19, '2021-10-24 22:41:05', 'Lola', 'Brigitta', 'F', '1930-09-04'),
 	(20, '2021-10-25 09:56:13', 'Larisa', 'Dolina', 'F', '1958-10-04'),
-	(24, '2021-10-28 13:07:31', 'Mark', 'Antony', 'M', '0001-04-04');
+	(24, '2021-10-28 13:07:31', 'Mark', 'Antony', 'M', '0001-04-04'),
+	(25, '2021-11-02 22:56:38', 'Lars', 'Trier', 'M', '1952-10-04'),
+	(26, '2021-11-02 23:47:35', 'Jaga', 'Koshceeva', 'F', '1012-11-13'),
+	(27, '2021-11-03 17:28:11', 'Cindy', 'Crawford', 'M', '1966-02-20'),
+	(31, '2021-11-04 09:23:02', 'Cindy', 'Crawford', 'M', '1966-02-20');
 /*!40000 ALTER TABLE `patients` ENABLE KEYS */;
 
 CREATE TABLE IF NOT EXISTS `registration_complaints` (
